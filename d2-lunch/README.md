@@ -39,3 +39,6 @@
 ## Answer 4
 - Just using the "grep" command the way it's displayed in the question would include genes that, for instance, overlap with pseudogenes. Including a pipe where you select for something shared between all the actual pseudogenes like "processed" and "unprocessed" would remove all the extra junk. In this case grep-ing for "proccessed" would cover both options.
 `grep "_pseudogene" genes.gtf | grep "_processed" | cut -f9 | uniq -c`
+
+## Answer 5
+`cut -f1,4,5,14  gene-tabs.gtf > gene-tabs.bed`

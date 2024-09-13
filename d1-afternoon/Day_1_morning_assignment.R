@@ -12,13 +12,14 @@ df %>%
   group_by(SUBJECT) %>%
   summarize(count = n()) %>%
   arrange(-count) #same as the code above but the "-" reverses the order.
-# K-562 has the most subjects at 217.
+# K-562 has the most subjects at 217, followed by NPJ8 at 72.
 
 df %>%
   group_by(SMTSD) %>%
   summarize(count2 = n()) %>%
   arrange(count2)
-# Kidney has the least samples at 4 and whole blood has the most at 3288. Tissue diversity and accessibility might play a role. The brain, for instance, performs myriad functions with diverse tissues and structures whereas the kidneys may be relatively homogenous.
+# Kidney and cervix had the least samples and whole blood and muscle had the most. Tissue diversity and accessibility might play a role. Blood and muscle are both plentiful and easy to sample.
+# Kidney and cervix may be harder to access. Cervix in particular is limited to half of subjects by default.
 
 df_npj8 <- df %>%
   filter(SUBJECT == "GTEX-NPJ8") #assigning a single subject's data as a new object.

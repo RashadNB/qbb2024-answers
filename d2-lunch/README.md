@@ -10,7 +10,7 @@
 ## Answer 2
 `cut -f1 hg38-gene-metadata-go.tsv | sort | uniq -c | sort -n`
 - This line isolates the first column and sorts it alphabetically. Then is finds the number of times each variable in the column is represented and sorts them again numerically to reveal that the highest go_id is ENSG00000168036 with 273 entries.
-`grep "ENSG00000168036" hg38-gene-metadata-go.tsv | sort`
+`grep -w "ENSG00000168036" hg38-gene-metadata-go.tsv | sort -k 3 -f > ENSG00000168036` 
 - Here I isolate entries with the gene id of interest and sort them alphabetically based on the name_1006 column.
 - Based on all the roles it seems to have in the body, this gene may code for a pretty ubiquitously expressed receptor associated with the cell membrane since it is closely associated with the Wnt pathway.
 
@@ -37,7 +37,7 @@
 - 48 chr22
 
 ## Answer 4
-- Just using the "grep" command the way it's displayed in the question would include genes that, for instance, overlap with pseudogenes. Including a pipe where you select for something shared between all the actual pseudogenes like "processed" and "unprocessed" would remove all the extra junk. In this case grep-ing for "proccessed" would cover both options.
+- Just using the "grep" command the way it's displayed in the question would return any line where pseudogene occurs, regardless of whether it is a "processed_pseudogene" or an "unprocessed_pseudogene" or anything esle containing the word. To fix the issue, one could employ a search algorithm using multiple filters such as the one used in Question 3.
 `grep "_pseudogene" genes.gtf | grep "_processed" | cut -f9 | uniq -c`
 
 ## Answer 5

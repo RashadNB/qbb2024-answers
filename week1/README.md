@@ -14,3 +14,12 @@
 - Doing the same as above but including 40s, 50s, and 60s shows that there are 3 uncovered sites.
 - 'grep -v 10 coverage3.txt | grep -v 20 | grep -v 30 | grep -v 40 | grep -v 50 | grep -v 60 | grep -v 70 | grep 0 | wc -l'
 - Once again both distributions match the data quite well.
+
+#Answer 2.4
+- 'dot -Tpng deBruijn_graph.dot -o deBruijn_graph.png' 
+
+#Answer 2.5
+- 5' TCTTATTCATTGATTT 3'
+
+#Answer 2.6
+- The main thing needed to accurately reconstruct the genome would be longer sequence reads. Longer reads would allow for more overlap between fragments rather than the small number of nucleotide overlaps we can get with our current set-up. This would reduce the number of possible subsequent sequences. 

@@ -26,3 +26,6 @@ grep -v '^>' sacCer3.fa | tr -d '\n' | wc -c
 echo "76 * 669548 / 12200000" | bc 
 # the depth of coverage is 4
 
+### Question 1.4 ###
+du -m A01_* | sort -n
+# A01_62.fastq file is the biggest (149Mb du), A01_27.fastq is the smallest (110Mb of du).

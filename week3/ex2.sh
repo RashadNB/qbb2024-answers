@@ -29,3 +29,12 @@ do
     samtools index ${my_sample}.bam
 done
 # Coverage does match, but almost on a technicality because of how not uniform it is. Some areas have disproprtionately more coverage than others so an "average" read depth may not be representative.
+
+
+### Question 2.5 ###
+# There are 3 SNPs visible. One of them is only convered by two reads but since both show an SNP I doubt it is an artifact. 
+# While more reads would be good to confirm, I believe it is a genuine SNP.
+
+
+### Question 2.6 ###
+#The SNP occurs between SCC2 and SAS4 and is located at chrIV:825,834.

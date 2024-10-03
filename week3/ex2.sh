@@ -14,3 +14,9 @@ done
 less -S A01_09.sam
 grep -v "^@" A01_09.sam | wc -l 
 # There are 669548 read alignments in the file.
+
+
+### Question 2.3 ###
+grep -w "chrIII" A01_09.sam | wc -l # Finds lines in the sam file that reference chromosome 3.
+# There are 18196 alignments to ch3.
+

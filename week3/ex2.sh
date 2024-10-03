@@ -20,3 +20,12 @@ grep -v "^@" A01_09.sam | wc -l
 grep -w "chrIII" A01_09.sam | wc -l # Finds lines in the sam file that reference chromosome 3.
 # There are 18196 alignments to ch3.
 
+
+### Question 2.4 ###
+for my_sample in A01_*.sam
+do
+    my_sample=$(basename ${my_sample} .sam)
+    samtools sort -@ 4 -O bam -o ${my_sample}.bam ${my_sample}.sam
+    samtools index ${my_sample}.bam
+done
+# Coverage does match, but almost on a technicality because of how not uniform it is. Some areas have disproprtionately more coverage than others so an "average" read depth may not be representative.

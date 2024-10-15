@@ -1,0 +1,5 @@
+# 1.1
+- The base content incongruencies may arise from biased sampling during RNA cleavage or primer-related amplification errors, potentially explaining the GC content variations and additional peaks observed in FastQC analysis.
+
+# 1.2
+- The sequences of serine proteases are the most represented which makes sense given the tissue type used here is from the gut and serine proteases are digestive enzymes.

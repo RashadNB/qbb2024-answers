@@ -22,3 +22,6 @@ for _ in range(number_of_reads): # For loop to randomly select start positions, 
 
 for bp in coverage: # for every base pair in coverage, print the base pair
     print(bp)
+
+
+

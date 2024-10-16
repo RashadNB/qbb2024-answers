@@ -3,3 +3,7 @@
 
 # 1.2
 - The sequences of serine proteases are the most represented which makes sense given the tissue type used here is from the gut and serine proteases are digestive enzymes.
+
+# 2
+- I would keep 15 samples.
+- Replicates within a triplicate are close together, suggesting that the replicates were produced in a very consistent way.

@@ -29,3 +29,10 @@ echo "76 * 669548 / 12200000" | bc
 ### Question 1.4 ###
 du -m A01_* | sort -n
 # A01_62.fastq file is the biggest (149Mb du), A01_27.fastq is the smallest (110Mb of du).
+
+### Question 1.5 ###
+FastQC *.fastq
+
+# The median base quality on the read is 37.
+# This means that the probability of any base being an error is 10e-3.7.
+# The variability of quality seems to increase at both ends of a given read.

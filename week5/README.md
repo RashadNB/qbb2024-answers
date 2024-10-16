@@ -10,3 +10,6 @@
 
 # 3.1 
 - LFC-Fe replicate 3 and Fe replicate 1 are flipped.
+
+# 3.6 
+- Generally yes, they make sense. They have to do with metabolic processes that gut tissues are regularly engaged in.

@@ -7,3 +7,6 @@
 # 2
 - I would keep 15 samples.
 - Replicates within a triplicate are close together, suggesting that the replicates were produced in a very consistent way.
+
+# 3.1 
+- LFC-Fe replicate 3 and Fe replicate 1 are flipped.

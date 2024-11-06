@@ -77,3 +77,16 @@ ordered$mean.AUC[1:6] #modified to show top 6 instead of top 4 like OG code.
 
 plotExpression(gut, "Mal-A6", x="annotation" ) +
   theme(axis.text.x = element_text(angle = 90))
+
+# 3.3
+COI = colData(gut)$broad_annotation == "somatic precursor cell"
+spc = gut[,COI]
+spc.marker = scoreMarkers( spc, colData(spc)$annotation )
+chosen = spc.marker[["intestinal stem cell"]]
+ordered <- chosen[order(chosen$mean.AUC, decreasing=TRUE),]
+goi = rownames(ordered)[1:6]
+plotExpression(spc, features = goi, x = "annotation") +
+  theme(axis.text.x=element_text(angle=90)) 
+
+# Enteroblasts and intestinal stem cells are the most similar.
+# DI is the most specific marker for intestinal stem cells. 

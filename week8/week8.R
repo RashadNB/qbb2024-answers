@@ -69,4 +69,11 @@ plotReducedDim( epi, "X_umap", colour_by="annotation" )
 marker.info = scoreMarkers( epi, colData(epi)$annotation )
 chosen = marker.info[["enterocyte of anterior adult midgut epithelium"]]
 ordered = chosen[order(chosen$mean.AUC, decreasing=TRUE),]
-ordered$mean.AUC[1:4]
+ordered$mean.AUC[1:6] #modified to show top 6 instead of top 4 like OG code.
+
+# 3.2
+# The top 6 genes are Mal-A6, Men-b, vnd, betaTry, Mal-A1, and Nhe2.
+# It appears that this section of the gut is specialized in digesting carbohydrates.
+
+plotExpression(gut, "Mal-A6", x="annotation" ) +
+  theme(axis.text.x = element_text(angle = 90))

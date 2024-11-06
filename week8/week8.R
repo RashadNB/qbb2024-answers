@@ -61,3 +61,12 @@ colData(gut) = cbind( colData(gut), df )
 plotColData(gut, y = "subsets_Mito_percent", x = "broad_annotation") +
   theme(axis.text.x = element_text(angle = 90))
 #Secretory cells appear to have the most mitochondrial reads, which makes sense giving the energy-intensive role of producing and secreting proteins.
+
+# 3.1
+coi = colData(gut)$broad_annotation == "epithelial cell"
+epi = gut[,coi]
+plotReducedDim( epi, "X_umap", colour_by="annotation" )
+marker.info = scoreMarkers( epi, colData(epi)$annotation )
+chosen = marker.info[["enterocyte of anterior adult midgut epithelium"]]
+ordered = chosen[order(chosen$mean.AUC, decreasing=TRUE),]
+ordered$mean.AUC[1:4]
